@@ -1,1 +1,21 @@
-<p>course-list works!</p>
+<div class="container-fluid">
+
+  <h3>Courses</h3>
+
+  <br>
+
+  <div class="col">
+    <ul class="list-group">
+      <li
+        (click)="selectCourse(course)"
+        *ngFor="let course of courses"
+        [ngClass]="{'active': course == selectedCourse}"
+        class="list-group-item">
+
+        <a routerLink="/courses/{{course.id}}">
+          {{course.name}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
