@@ -1,1 +1,12 @@
-<p>widget-list works!</p>
+<h5>Widgets</h5>
+
+<div class="col">
+
+  <ul class="list-group">
+    <li class="list-group-item"
+        *ngFor="let widget of widgets">
+      {{widget.type}}
+    </li>
+  </ul>
+
+</div>
