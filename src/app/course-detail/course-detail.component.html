@@ -2,7 +2,7 @@
 
 <div class="container-fluid">
 
-  <div>
+  <div class="container-fluid" *ngIf="moduleId !== undefined">
 
     <nav class="navbar navbar-expand-sm bg-light">
       <app-lesson-tabs></app-lesson-tabs>
@@ -20,11 +20,11 @@
 
   </div>
     <div class="col-6">
-      <nav class="nav-pills">
+      <nav class="nav-pills" *ngIf="lessonId !== undefined">
         <app-topic-pills></app-topic-pills>
       </nav>
       <br>
-      <app-widget-list></app-widget-list>
+      <app-widget-list *ngIf="topicId !== undefined"></app-widget-list>
     </div>
 
   </div>

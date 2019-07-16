@@ -15,16 +15,17 @@ export class LessonTabsComponent implements OnInit {
   courseId = '';
   moduleId = '';
   lessonId = '';
-  lessons = []
+  lessons = ['1', '2'];
 
   ngOnInit() {
     this.router.params.subscribe(params => {
       this.courseId = params.cid;
       this.moduleId = params.mid;
       this.lessonId = params.lid;
+      if (this.courseId !== '') {
       this.service.findLessonsForModule(this.moduleId)
         .then(lessons => this.lessons = lessons);
+      }
     });
   }
-
 }

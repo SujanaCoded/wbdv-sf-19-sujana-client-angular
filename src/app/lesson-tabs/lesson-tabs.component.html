@@ -1,6 +1,6 @@
 
   <ul class="nav nav-tabs">
-    <li class="nav-item"
+    <li
         *ngFor="let lesson of lessons">
       <a [ngClass]="{'nav-link-active' : lesson.id == lessonId, 'nav-link' :  lesson.id != lessonId}"
          routerLink="/courses/{{courseId}}/modules/{{moduleId}}/lessons/{{lesson.id}}">

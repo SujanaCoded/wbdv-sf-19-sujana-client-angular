@@ -16,7 +16,7 @@ export class TopicPillsComponent implements OnInit {
   moduleId = '';
   lessonId = '';
   topicId = '';
-  topics = []
+  topics = ['1', '2'];
 
   ngOnInit() {
     this.router.params.subscribe(params => {
@@ -25,7 +25,8 @@ export class TopicPillsComponent implements OnInit {
       this.lessonId = params.lid;
       this.topicId = params.tid;
       this.service.findTopicsForLesson(this.lessonId)
-        .then(topics => this.topics = topics);
+        .then(topics => this.topics = topics)
+        .catch();
     });
   }
 
