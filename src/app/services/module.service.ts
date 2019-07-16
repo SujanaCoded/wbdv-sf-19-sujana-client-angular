@@ -1,7 +1,11 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Injectable()
-export default class ModuleServiceClient {
+@Injectable({
+  providedIn: 'root'
+})
+export default class ModuleService {
+
+  constructor() { }
 
   findModulesForCourse = courseId =>
     fetch(`http://localhost:8080/api/courses/${courseId}/modules`)

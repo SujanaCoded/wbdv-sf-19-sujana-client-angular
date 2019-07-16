@@ -10,11 +10,11 @@ import { ModuleListComponent } from './module-list/module-list.component';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import {FormsModule} from '@angular/forms';
-import CourseServiceClient from './services/CourseServiceClient';
-import ModuleServiceClient from './services/ModuleServiceClient';
-import LessonServiceClient from './services/LessonServiceClient';
-import TopicServiceClient from './services/TopicServiceClient';
-import WidgetServiceClient from './services/WidgetServiceClient';
+import CourseService from './services/course.service';
+import ModuleService from './services/module.service';
+import LessonService from './services/lesson.service';
+import TopicService from './services/topic.service';
+import WidgetService from './services/widget.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import WidgetServiceClient from './services/WidgetServiceClient';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [CourseServiceClient, ModuleServiceClient, LessonServiceClient, TopicServiceClient, WidgetServiceClient],
+  providers: [CourseService, ModuleService, LessonService, TopicService, WidgetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

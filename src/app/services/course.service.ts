@@ -1,7 +1,12 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Injectable()
-export default class CourseServiceClient {
+@Injectable({
+  providedIn: 'root'
+})
+export default class CourseService {
+
+  constructor() { }
+
   findAllCourses = () =>
     fetch('http://localhost:8080/api/courses')
       .then(response => response.json())

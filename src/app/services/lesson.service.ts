@@ -1,7 +1,11 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Injectable()
-export default class LessonServiceClient {
+@Injectable({
+  providedIn: 'root'
+})
+export default class LessonService {
+
+  constructor() { }
 
   findLessonsForModule = moduleId =>
     fetch(`http://localhost:8080/api/modules/${moduleId}/lessons`)
@@ -11,4 +15,3 @@ export default class LessonServiceClient {
     fetch(`http://localhost:8080/api/lessons/${lessonId}`)
       .then(response => response.json())
 }
-

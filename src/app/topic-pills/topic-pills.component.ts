@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import TopicService from '../services/TopicServiceClient';
+import TopicService from '../services/topic.service';
 
 @Component({
   selector: 'app-topic-pills',

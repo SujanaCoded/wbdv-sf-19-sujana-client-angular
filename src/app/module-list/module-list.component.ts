@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import ModuleService from '../services/ModuleServiceClient';
+import ModuleService from '../services/module.service';
 
 @Component({
   selector: 'app-module-list',
