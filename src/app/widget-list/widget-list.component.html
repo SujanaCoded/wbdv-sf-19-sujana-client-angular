@@ -1,12 +1,37 @@
-<h5>Widgets</h5>
-
 <div class="col">
 
-  <ul class="list-group">
-    <li class="list-group-item"
-        *ngFor="let widget of widgets">
-      {{widget.type}}
+  <ul class="list-group" *ngFor="let widget of widgets">
+
+    <li class="list-group-item" *ngIf="widget.type === 'Heading'">
+
+      <h1 *ngIf="widget.size === 1">{{widget.text}}</h1>
+      <h2 *ngIf="widget.size === 2">{{widget.text}}</h2>
+      <h3 *ngIf="widget.size === 3">{{widget.text}}</h3>
     </li>
+
+    <li class="list-group-item" *ngIf="widget.type === 'Paragraph'">
+      <p>{{widget.text}}</p>
+    </li>
+
+    <li class="list-group-item" *ngIf="widget.type === 'Image'">
+
+      <img class="img-thumbnail" src="{{widget.src}}" alt="placeholder image"/>
+
+    </li>
+
+    <li class="list-group-item" *ngIf="widget.type === 'Link'">
+
+      <a class="card-link" href="{{widget.src}}">{{widget.title}}</a>
+
+    </li>
+
+    <li class="list-group-item" *ngIf="widget.type === 'List'">
+
+      <ul *ngFor="let item of widget.items.split(',')">
+        <li>{{item}}</li>
+      </ul>
+    </li>
+
   </ul>
 
 </div>

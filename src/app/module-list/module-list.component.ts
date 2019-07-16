@@ -24,5 +24,4 @@ export class ModuleListComponent implements OnInit {
         .then(modules => this.modules = modules);
     });
   }
-
 }

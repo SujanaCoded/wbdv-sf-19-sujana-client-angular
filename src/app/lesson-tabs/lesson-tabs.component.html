@@ -1,15 +1,10 @@
-<h5>Lessons</h5>
 
-<div class="col">
-
-  <ul class="list-group">
-    <li class="list-group-item"
-        [ngClass]="{'active' : lesson.id == lessonId}"
+  <ul class="nav nav-tabs">
+    <li class="nav-item"
         *ngFor="let lesson of lessons">
-      <a routerLink="/courses/{{courseId}}/modules/{{moduleId}}/lessons/{{lesson.id}}">
+      <a [ngClass]="{'nav-link-active' : lesson.id == lessonId, 'nav-link' :  lesson.id != lessonId}"
+         routerLink="/courses/{{courseId}}/modules/{{moduleId}}/lessons/{{lesson.id}}">
         {{lesson.name}}
       </a>
     </li>
   </ul>
-
-</div>

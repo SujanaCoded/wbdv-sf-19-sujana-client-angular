@@ -1,12 +1,10 @@
-<h5>Topics</h5>
-
 <div class="col">
 
-  <ul class="list-group">
-    <li class="list-group-item"
-        [ngClass]="{'active' : topic.id == topicId}"
+  <ul class="nav nav-pills">
+    <li class="nav-item"
         *ngFor="let topic of topics">
-      <a routerLink="/courses/{{courseId}}/modules/{{moduleId}}/lessons/{{lessonId}}/topics/{{topic.id}}">
+      <a [ngClass]="{'nav-link-active' : topic.id == topicId, 'nav-link' :  topic.id != topicId}"
+         routerLink="/courses/{{courseId}}/modules/{{moduleId}}/lessons/{{lessonId}}/topics/{{topic.id}}">
         {{topic.name}}
       </a>
     </li>
