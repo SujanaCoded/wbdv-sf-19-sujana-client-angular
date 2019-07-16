@@ -9,10 +9,10 @@ export default class TopicService {
 
 
   findTopicsForLesson = lessonId =>
-    fetch(`http://localhost:8080/api/lessons/${lessonId}/topics`)
+    fetch(`https://thawing-plateau-31351.herokuapp.com/api/lessons/${lessonId}/topics`)
       .then(response => response.json())
 
   findTopicById = topicId =>
-    fetch(`http://localhost:8080/api/topics/${topicId}`)
+    fetch(`https://thawing-plateau-31351.herokuapp.com/api/topics/${topicId}`)
       .then(response => response.json())
 }

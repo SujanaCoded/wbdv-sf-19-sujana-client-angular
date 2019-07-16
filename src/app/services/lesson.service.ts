@@ -8,10 +8,10 @@ export default class LessonService {
   constructor() { }
 
   findLessonsForModule = moduleId =>
-    fetch(`http://localhost:8080/api/modules/${moduleId}/lessons`)
+    fetch(`https://thawing-plateau-31351.herokuapp.com/api/modules/${moduleId}/lessons`)
       .then(response => response.json())
 
   findLessonById = lessonId =>
-    fetch(`http://localhost:8080/api/lessons/${lessonId}`)
+    fetch(`https://thawing-plateau-31351.herokuapp.com/api/lessons/${lessonId}`)
       .then(response => response.json())
 }

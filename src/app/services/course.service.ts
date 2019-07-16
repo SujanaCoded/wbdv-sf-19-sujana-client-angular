@@ -8,11 +8,11 @@ export default class CourseService {
   constructor() { }
 
   findAllCourses = () =>
-    fetch('http://localhost:8080/api/courses')
+    fetch('https://thawing-plateau-31351.herokuapp.com/api/courses')
       .then(response => response.json())
 
 
   findCourseById = id =>
-    fetch(`http://localhost:8080/api/courses/${id}`)
+    fetch(`https://thawing-plateau-31351.herokuapp.com/api/courses/${id}`)
       .then(response => response.json())
 }
